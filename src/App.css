@@ -1,38 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Raleway:wght@200&display=swap');
+
 .App {
-  text-align: center;
+  font-family: 'Gabarito', cursive;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-title {
+  width: 90%;
+  margin: 20px auto;
+  font-size: 1.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  width: 90%;
+  background-color: #e4eefe;
+  padding: 20px;
+  margin: 20px auto;
+  border-bottom: 2px solid #abb5c5;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header span {
+  color: #1DC775;
+  font-weight: 700;
+  width: 13%;
+  font-size: 1.125rem;
+  border: 1px solid rgba(188, 186, 186, 0.5);
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 40px;
+  padding-left: 5px;
+  border-right: none;
+}
+.header>span:last-child {
+  border-right: 1px solid rgba(188, 186, 186, 0.5);
+
+}
+.header>span:nth-last-child(2),
+.header>span:nth-child(4) {
+  width: 25%;
 }
 
-.App-link {
-  color: #61dafb;
+.dataList {
+  width: 90%;
+  background-color: #fafafa;
+  padding: 20px;
+  margin: 20px auto;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dataObject {
+  color: #626a66;
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid rgba(188, 186, 186, 0.5);
+  border-right: 1px solid rgba(188, 186, 186, 0.5);
+}
+.dataList div:last-child{
+  border-bottom: 1px solid rgba(188, 186, 186, 0.5);
+}
+
+.dataObject>span {
+  /* background-color: red; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 13%;
+  border: 1px solid rgba(188, 186, 186, 0.5);
+  border-right: none;
+  border-bottom:none ;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 10px;
+}
+
+
+.dataList span:nth-child(3){
+  text-transform: capitalize;
+}
+
+.dataList span:nth-child(5),
+.dataList span:nth-child(4) {
+  width: 25%;
+}
+
+.dataList span:last-child button {
+  background: #3e68bb;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  width: 70px;
+}
+
+.dataList span:last-child button:hover {
+  background-color: #3872e4;
+}
+
+.pagination {
+  position: relative;
+  margin: 40px;
+  z-index: -1;
+}
+
+.pagination .totalResult {
+  font-size: 1.125rem;
+  color: #999a99;
+  position: absolute;
+  right: 0;
+  top: -20px;
+}
+
+.paginationBar {
+  position: absolute;
+  right: 0;
+}
+
+.paginationBar button {
+  border: none;
+  margin: 2px;
+  padding: 10px;
+  width: 35px;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+.paginationBar button.active {
+  background: #3872e4;
+}
+
+.paginationBar button:hover {
+  background: #97b1e6;
+}
+
+.modal {
+  width: 70%;
+  height: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  background: #fafafa;
+  /* padding-bottom: 50px; */
+}
+
+.modal-header {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1DC775;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.modal-data-info {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #999e9c;
+  margin: 10px 30px;
+}
+
+.modal-dignosis-info {
+  margin: 30px;
+}
+
+.modal-dignosis-info .head {
+  color: #323634;
+  display: flex;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+.modal-dignosis-info .head span {
+  width: 30%;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+
+.modal-dignosis-info .head span:last-child {
+  border-right: 0px solid black;
+  width: 40%;
+}
+
+.modal-dignosis-info .body {
+  display: flex;
+  font-size: 0.85rem;
+  border: 1px solid black;
+
+}
+
+.modal-dignosis-info .body span {
+  width: 30%;
+  border-right: 1px solid black;
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.modal-dignosis-info .body span:last-child {
+  width: 40%;
+  border-right: 0px solid black;
+}
+
+.modal-footer button {
+  background: none;
+  border: 1px solid #1DC775;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.12rem;
+  width: 100px;
+  bottom: 20px;
+  right: 30px;
+  position: absolute;
+}
+
+.modal-footer button:hover {
+  background-color: #53e19c;
+}
+
+
+/* responsive */
+@media screen and (max-width: 549px) {
+  .header span {
+    font-size: 0.85rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header>span:nth-child(5){
+    width: 15%;
+  }
+  .header>span:nth-child(5),
+  .header>span:nth-child(4) {
+    width: 20%;
+  }
+
+  .dataList span:nth-child(5),
+  .dataList span:nth-child(4) {
+    width: 20%;
+  }
+
+
+  .dataList span:last-child button {
+    width: 35px;
+    font-size: 0.7rem;
+  }
+
+  .dataObject>span {
+    font-size: 0.75rem;
+    padding-left: 5px;
+  }
+  .dataObject>span:first-child {
+    width: 15%;
+  }
+  .pagination .totalResult {
+    font-size: 0.85rem;
+  }
+  .paginationBar button {
+    width: 25px;
+    padding: 5px;
+  }
+
+  .modal-footer button {
+    width: 60px;
+    font-size: 0.86rem;
+    padding: 5px;
   }
 }
